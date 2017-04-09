@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "164081607384",
+    "firebase_url": "https://holdsum-537dd.firebaseio.com",
+    "project_id": "holdsum-537dd",
+    "storage_bucket": "holdsum-537dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164081607384:android:35bee5fb394e8501",
+        "android_client_info": {
+          "package_name": "gigster.com.holdsum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164081607384-fdarnhubeuofep9954nh1dp7sh6vbq7o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "gigster.com.holdsum",
+            "certificate_hash": "F2FC360C22653639AE53213FE0773CDDD3B8B54A"
+          }
+        },
+        {
+          "client_id": "164081607384-mn4k6ejipd1rdplpiufqufgprl5s91kb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "gigster.com.holdsum",
+            "certificate_hash": "FA0DB63B07CCAC5C1C7B5B3A31E9665A6772026D"
+          }
+        },
+        {
+          "client_id": "164081607384-i831h77nk8t2jtr49gt0dbjks6t9kp36.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB84jjDMXDbkNywjEbJl3eMHUZD69ODHX4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164081607384-i831h77nk8t2jtr49gt0dbjks6t9kp36.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

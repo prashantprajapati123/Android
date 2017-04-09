@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data class="RegistrationSecondScreenBinding">
+        <variable
+            name="data"
+            type="gigster.com.holdsum.viewmodel.RegistrationViewModel"/>
+        <variable
+            name="presenter"
+            type="gigster.com.holdsum.presenters.RegistrationPresenter"/>
+    </data>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TealLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/employment"/>
+
+            <gigster.com.holdsum.views.HintSpinner
+                android:id="@+id/status"
+                style="@style/FormSpinner"
+                android:entries="@array/employed_or_not"
+                bind:selectedPosition="@={data.employmentStatus}"
+                />
+
+            <EditText android:id="@+id/funds_source"
+                style="@style/FormEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:hint="@string/funds_source"
+                android:text="@={data.fundsSource}"/>
+
+            <EditText android:id="@+id/monthly_income"
+                style="@style/FormEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/monthly_income_before_taxes"
+                android:text="@={data.monthlyIncome}" />
+
+            <EditText android:id="@+id/source_of_income"
+                style="@style/FormEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/income_source"
+                android:text="@={data.sourceOfIncome}"/>
+
+
+            <TextView
+                style="@style/TealLabel"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/pay_frequency"/>
+
+
+            <gigster.com.holdsum.views.HintSpinner
+                android:id="@+id/pay_frequency"
+                style="@style/FormSpinner"
+                android:layout_marginTop="10dp"
+                android:entries="@array/pay_frequency"
+                bind:selectedPosition="@={data.payFrequency}"/>
+
+            <gigster.com.holdsum.views.DatePickerEditText android:id="@+id/next_pay_date"
+                style="@style/FormDateEditText"
+                android:hint="@string/next_pay_date"
+                android:text="@={data.nextPayDate}"
+                />
+
+            <TextView
+                style="@style/TealLabel"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/account_information"/>
+
+            <gigster.com.holdsum.views.HintSpinner
+                android:id="@+id/account_type"
+                style="@style/FormSpinner"
+                android:layout_marginTop="10dp"
+                android:entries="@array/account_type"
+                bind:selectedPosition="@={data.accountType}"/>
+
+            <EditText android:id="@+id/account_number"
+                style="@style/FormNumberEditText"
+                android:hint="@string/account_number"
+                android:text="@={data.accountNumber}"/>
+
+            <EditText android:id="@+id/routing_number"
+                style="@style/FormNumberEditText"
+                android:hint="@string/routing_number"
+                android:text="@={data.routingNumber}"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</layout>

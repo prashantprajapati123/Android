@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class="LoginBinding">
+        <variable
+            name="presenter"
+            type="gigster.com.holdsum.presenters.LoginPresenter"/>
+        <variable
+            name="data"
+            type="gigster.com.holdsum.viewmodel.LoginViewModel"/>
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="gigster.com.holdsum.activities.LoginActivity">
+
+        <fragment
+            android:name="gigster.com.holdsum.fragments.TopHeaderFragment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/top_bar_fragment"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_bar_fragment"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TealLabel"
+                android:text="@string/you_must_sign_in_before_accessing_your_dashboard"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                style="@style/Label"
+                android:layout_marginTop="25dp"
+                android:text="@string/username"/>
+
+            <EditText
+                style="@style/LoginUsernameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/username"
+                android:text="@={data.username}"/>
+
+            <EditText android:id="@+id/password"
+                style="@style/LoginPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:text="@={data.password}"/>
+
+            <Button android:id="@+id/login_button"
+                style="@style/ColoredButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:onClick="@{() -> presenter.onLoginClicked()}"/>
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/facebook_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="30dp" />
+
+        </LinearLayout>
+
+        <Button android:id="@+id/sign_up"
+            style="@style/Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_alignParentBottom="true"
+            android:text="@string/sign_up"
+            android:onClick="@{() -> presenter.onSignupClicked()}"
+            />
+
+    </RelativeLayout>
+</layout>

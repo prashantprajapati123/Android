@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class="RegistrationThirdScreenBinding">
+        <variable
+            name="data"
+            type="gigster.com.holdsum.viewmodel.RegistrationViewModel"/>
+        <variable
+            name="presenter"
+            type="gigster.com.holdsum.presenters.RegistrationPresenter"/>
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            style="@style/TealLabel"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/income_info"/>
+
+        <EditText android:id="@+id/role_title"
+            style="@style/FormEditText"
+            android:hint="@string/role_title"
+            android:text="@={data.roleTitle}"/>
+
+        <EditText android:id="@+id/place_of_employment"
+            style="@style/FormEditText"
+            android:hint="@string/place_of_employment"
+            android:text="@={data.placeOfEmployment}"/>
+
+        <EditText android:id="@+id/emp_address"
+            style="@style/FormEditText"
+            android:hint="@string/employer_address"
+            android:text="@={data.employerAddress}"/>
+
+        <EditText android:id="@+id/emp_city"
+            style="@style/FormEditText"
+            android:hint="@string/emp_city"
+            android:text="@={data.employerCity}"/>
+
+        <EditText android:id="@+id/emp_state"
+            style="@style/FormStateEditText"
+            android:hint="@string/emp_state"
+            android:text="@={data.employerState}"/>
+
+        <EditText android:id="@+id/emp_zip"
+            style="@style/FormZipEditText"
+            android:hint="@string/emp_zip"
+            android:text="@={data.employerZip}"/>
+
+        <TextView
+            style="@style/TealLabel"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/upload_documents"/>
+
+        <EditText android:id="@+id/paystubs"
+            style="@style/FormPhotoEditText"
+            android:hint="@string/two_most_recent_paystubs"
+            android:onClick="@{() -> presenter.onPaystubsTakePhoto()}"/>
+
+        <EditText android:id="@+id/identification"
+            style="@style/FormPhotoEditText"
+            android:hint="@string/drivers_license_or_id"
+            android:onClick="@{() -> presenter.onIdentificationTakePhoto()}"/>
+
+    </LinearLayout>
+</layout>

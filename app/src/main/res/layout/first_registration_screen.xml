@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data class="RegistrationFirstScreenBinding">
+        <variable
+            name="data"
+            type="gigster.com.holdsum.viewmodel.RegistrationViewModel"/>
+    </data>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TealLabel"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/personal_info" />
+
+            <EditText
+                android:id="@+id/first_name"
+                style="@style/FormEditText"
+                android:hint="@string/first_name"
+                android:text="@={data.firstName}"
+                />
+
+            <EditText
+                android:id="@+id/middle_initial"
+                style="@style/FormEditText"
+                android:hint="@string/middle_initial"
+                android:text="@={data.middleInitial}"
+                />
+
+            <EditText
+                android:id="@+id/last_name"
+                style="@style/FormEditText"
+                android:hint="@string/last_name"
+                android:text="@={data.lastName}"
+                 />
+
+            <gigster.com.holdsum.views.HintSpinner
+                android:id="@+id/sex"
+                style="@style/FormSpinner"
+                android:entries="@array/sex"
+                bind:selectedPosition="@={data.sex}"
+                />
+
+            <EditText
+                android:id="@+id/ssn"
+                style="@style/FormSSNEditText"
+                android:hint="@string/ssn"
+                android:text="@={data.ssn}"/>
+
+            <EditText
+                android:id="@+id/ssn_confirm"
+                style="@style/FormSSNEditText"
+                android:hint="@string/ssn_confirm"
+                android:text="@={data.ssnConfirm}"/>
+
+            <TextView
+                style="@style/TealLabel"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/address" />
+
+
+            <EditText
+                android:id="@+id/address"
+                style="@style/FormEditText"
+                android:hint="@string/street_address"
+                android:text="@={data.address}"/>
+
+            <EditText
+                android:id="@+id/city"
+                style="@style/FormEditText"
+                android:hint="@string/city"
+                android:text="@={data.city}"/>
+
+            <EditText
+                android:id="@+id/state"
+                style="@style/FormStateEditText"
+                android:hint="@string/state"
+                android:text="@={data.state}"/>
+
+            <EditText
+                android:id="@+id/zip_code"
+                style="@style/FormZipEditText"
+                android:imeOptions="actionDone"
+                android:hint="@string/zip_code"
+                android:text="@={data.zip}"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</layout>

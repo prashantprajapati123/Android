@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class="UserSignupBinding">
+        <variable
+            name="presenter"
+            type="gigster.com.holdsum.presenters.UserSignupPresenter"/>
+        <variable
+            name="data"
+            type="gigster.com.holdsum.viewmodel.UserSignupViewModel"/>
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context="gigster.com.holdsum.activities.UserSignupActivity">
+
+        <fragment
+            android:name="gigster.com.holdsum.fragments.TopHeaderFragment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/top_bar_fragment"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_bar_fragment"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TealLabel"
+                android:text="@string/select_username_and_password"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"/>
+
+            <EditText
+                style="@style/LoginUsernameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/username"
+                android:text="@={data.username}"/>
+
+            <EditText
+                style="@style/LoginEmailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:text="@={data.email}"/>
+
+            <EditText
+                style="@style/LoginPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:text="@={data.password}"/>
+
+            <EditText
+                style="@style/LoginPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/confirm_password"
+                android:text="@={data.confirmPassword}"/>
+
+        </LinearLayout>
+
+        <Button android:id="@+id/next_button"
+            style="@style/ColoredButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_alignParentBottom="true"
+            android:text="@string/next"
+            android:onClick="@{() -> presenter.onNextClicked()}"/>
+
+    </RelativeLayout>
+</layout>

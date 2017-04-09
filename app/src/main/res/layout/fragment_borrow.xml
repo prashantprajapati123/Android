@@ -1,0 +1,272 @@
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+    <data class="BorrowDataBinding">
+        <import type="java.lang.String"/>
+        <variable
+            name="presenter"
+            type="gigster.com.holdsum.presenters.BorrowPresenter"/>
+        <variable
+            name="data"
+            type="gigster.com.holdsum.viewmodel.BorrowViewModel"/>
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/borrow_root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_white"
+            android:orientation="vertical"
+            tools:context="gigster.com.holdsum.fragments.BorrowFragment">
+
+            <Button android:id="@+id/confirm_button"
+                style="@style/ColoredButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="5dp"
+                android:text="@string/confirm_loan"
+                android:onClick="@{() -> presenter.onConfirmLoan()}"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/confirm_button">
+                <LinearLayout
+                    android:animateLayoutChanges="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
+
+                    <TextView
+                        style="@style/TealLabel"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/select_requirements" />
+
+                    <TextView
+                        style="@style/QuestionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loan_funds_available"/>
+
+                    <TextView
+                        style="@style/FormEditText"
+                        android:text="@{'$' + data.fundsAvailable}"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:inputType="none"/>
+
+                    <TextView
+                        style="@style/QuestionLabel"
+                        android:text="@string/loan_repayment_date" />
+
+                    <gigster.com.holdsum.views.DatePickerEditText
+                        android:id="@+id/repayment_date_picker"
+                        style="@style/FormEditText"
+                        android:text="@={data.repaymentDate}"
+                        android:focusable="false"
+                        android:inputType="none"
+                        bind:onValidationFail="@{() -> presenter.onInvalidRepaymentDateValidationFail()}"/>
+
+                    <EditText
+                        android:id="@+id/how_much_input"
+                        style="@style/FormNumberEditText"
+                        android:hint="@string/loan_how_much"
+                        android:text="@={data.amount}"/>
+
+                    <TextView
+                        style="@style/TealLabel"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/answer_questions" />
+
+                    <TextView
+                        style="@style/QuestionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loan_question_1"/>
+
+                    <gigster.com.holdsum.views.HintSpinner
+                        android:id="@+id/question1"
+                        style="@style/FormSpinner"
+                        android:entries="@array/question1_answers"
+                        bind:selectedPosition="@={data.question1Answer}"/>
+
+                    <TextView
+                        style="@style/QuestionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loan_question_2"/>
+
+                    <gigster.com.holdsum.views.HintSpinner
+                        android:id="@+id/question2"
+                        style="@style/FormSpinner"
+                        android:entries="@array/question2_answers"
+                        bind:selectedPosition="@={data.question2Answer}" />
+
+                    <EditText
+                        android:id="@+id/question2_textbox"
+                        style="@style/FormEditText"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:hint="@string/loan_question_2_textbox_hint"
+                        android:text="@={data.question2Textbox}"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        style="@style/QuestionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loan_question_3"/>
+
+                    <gigster.com.holdsum.views.HintSpinner
+                        android:id="@+id/question3"
+                        style="@style/FormSpinner"
+                        android:entries="@array/question3_answers"
+                        bind:selectedPosition="@={data.question3Answer}"/>
+
+                    <TextView
+                        style="@style/QuestionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loan_question_4"/>
+
+                    <gigster.com.holdsum.views.HintSpinner
+                        android:id="@+id/question4"
+                        style="@style/FormSpinner"
+                        android:entries="@array/question4_answers"
+                        bind:selectedPosition="@={data.question4Answer}"/>
+
+                    <TextView
+                        style="@style/QuestionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loan_question_5"/>
+
+                    <gigster.com.holdsum.views.HintSpinner
+                        android:id="@+id/question5"
+                        style="@style/FormSpinner"
+                        android:entries="@array/question5_answers"
+                        bind:selectedPosition="@={data.question5Answer}"/>
+
+                    <TextView
+                        android:id="@+id/question5_alt_label"
+                        style="@style/QuestionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{String.format(@string/loan_question_5_alt, data.fundsSource)}"
+                        android:visibility="gone"/>
+
+                    <gigster.com.holdsum.views.HintSpinner
+                        android:id="@+id/question5_alt"
+                        style="@style/FormSpinner"
+                        android:entries="@array/question5_alt_answers"
+                        android:visibility="gone"
+                        bind:selectedPosition="@={data.question5AnswerAlt}"/>
+
+                    <TextView
+                        style="@style/QuestionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loan_question_6"/>
+
+                    <gigster.com.holdsum.views.HintSpinner
+                        android:id="@+id/question6"
+                        style="@style/FormSpinner"
+                        android:entries="@array/question6_answers"
+                        bind:selectedPosition="@={data.question6Answer}"/>
+
+                    <TextView
+                        style="@style/QuestionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{String.format(@string/loan_question_7, data.nextPaydate)}"/>
+
+                    <gigster.com.holdsum.views.HintSpinner
+                        android:id="@+id/question7a"
+                        style="@style/FormSpinner"
+                        android:entries="@array/question7_answers"
+                        bind:selectedPosition="@={data.question7aAnswer}"/>
+
+                    <EditText
+                        android:id="@+id/question7a_textbox"
+                        style="@style/FormNumberEditText"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:hint="@string/loan_question_7_textbox_hint"
+                        android:text="@={data.question7aTextbox}"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        style="@style/QuestionLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{String.format(@string/loan_question_7, data.nextPaydate)}"
+                        android:visibility="gone"/>
+
+                    <gigster.com.holdsum.views.HintSpinner
+                        android:id="@+id/question7b"
+                        style="@style/FormSpinner"
+                        android:entries="@array/question7_answers"
+                        android:visibility="gone"
+                        bind:selectedPosition="@={data.question7bAnswer}"/>
+
+                    <EditText
+                        android:id="@+id/question7b_textbox"
+                        style="@style/FormNumberEditText"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:hint="@string/loan_question_7_textbox_hint"
+                        android:text="@={data.question7bTextbox}"
+                        android:visibility="gone"/>
+
+                    <TextView android:id="@+id/interest_rate_text"
+                        style="@style/TealLabel"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/interest_rate" />
+
+                    <TextView
+                        android:id="@+id/interest_amount"
+                        style="@style/DarkLabel"
+                        android:layout_gravity="center_horizontal"
+                        android:text="8%" />
+
+                    <TextView android:id="@+id/state_admin_rate"
+                        style="@style/TealLabel"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/state_admin_rate" />
+
+                    <TextView
+                        android:id="@+id/rate_amount"
+                        style="@style/DarkLabel"
+                        android:layout_gravity="center_horizontal"
+                        android:text="$2" />
+
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+        <FrameLayout
+            android:id="@+id/not_approved_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/TealLabel"
+                android:text="@string/user_not_approved"/>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</layout>

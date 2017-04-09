@@ -1,0 +1,243 @@
+<resources>
+    <string name="app_name">HoldSum</string>
+    <string name="start_screen_message">Join Holdsum to Borrow Quick Cash</string>
+    <string name="lend_money">Lend money</string>
+    <string name="log_in">Log in</string>
+    <string name="borrow_in_3_simple_steps">Borrow in 3 Simple Steps!</string>
+    <string name="register_your_account">Register your account</string>
+    <string name="request_a_loan_up_to_500">Request a loan up to $500</string>
+    <string name="agree_e_sign_repayment_agreement"><![CDATA[Agree & E-Sign Repayment Agreement]]></string>
+    <string name="next">Next</string>
+    <string name="enter_demographic_and_income_information">Enter demographic and Income Information</string>
+    <string name="upload_necessary_documentation">Upload Necessary Documentation</string>
+    <string name="link_your_checking_paypal_accounts"><![CDATA[Link Your Checking & PayPal Accounts]]></string>
+    <string name="get_approved">Get Approved</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="invest_3_steps">Invest in 2 simple steps!</string>
+    <string name="become_lender_part">Invest &amp; become a Lender-Partner</string>
+    <string name="receive_repayments">Receive Repayments + Interest</string>
+    <string name="visit_holdsum_marketplace">Visit HoldSum Marketplace</string>
+    <string name="choose_anonymous">Choose Anonymous Borrower(s)</string>
+    <string name="verify_founding">Verify Founding Amounts, Expected Interest\nPayments (8%) and Repayments Dates</string>
+    <string name="fund_your_account">Fund your HoldSum Account</string>
+    <string name="receive_push_of_payment">Receive Push Notifications of Payment</string>
+    <string name="verify_payments">Verify Payments are Correct</string>
+    <string name="accept_payments">Accept Cash Payment</string>
+    <string name="repeat">Repeat</string>
+    <string name="enter_loan_amount">Enter Loan Amount You Want</string>
+    <string name="approve_amout">Approve amount (12%) &amp; Payback date</string>
+    <string name="esign_your_loan">E-Sign Your Loan Agreement</string>
+    <string name="receive_cash">Receive Cash</string>
+    <string name="you_must_sign_in_before_accessing_your_dashboard">you must sign in before accessing your dashboard</string>
+    <string name="username">Username</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign up</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="log_in_with_facebook">Log in with Facebook</string>
+    <string name="thirty_three_percent">33%</string>
+    <string name="personal_info">personal info</string>
+    <string name="first_name">First Name</string>
+    <string name="middle_initial">M.I.</string>
+    <string name="last_name">Last Name</string>
+    <string name="sex">Sex</string>
+    <string name="address">ADDRESS</string>
+    <string name="street_address">Street Address</string>
+    <string name="submit">Submit</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="registration">Registration</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="dashboard">dashboard</string>
+    <string name="borrow">borrow</string>
+    <string name="stats">stats</string>
+    <string name="profile">profile</string>
+    <string name="next_payment">next payment</string>
+    <string name="payment">Payment</string>
+    <string name="past_loans">past loans</string>
+    <string name="select_requirements">select requirements</string>
+    <string name="answer_questions">answer questions</string>
+    <string name="loan_funds_available">Loan funds available</string>
+    <string name="loan_repayment_date">Loan repayment date</string>
+    <string name="interest_rate">interest rate</string>
+    <string name="loan_costs">loan costs</string>
+    <string name="confirm_loan">Confirm Loan</string>
+    <string name="date_selection_error">Must select a date in the future</string>
+    <string name="funds_requested">funds requested</string>
+    <string name="employment">employment</string>
+    <string name="pay_frequency">pay frequency</string>
+    <string name="status">Status</string>
+    <string name="monthly_income_before_taxes">Monthly income before taxes</string>
+    <string name="income_source">Source of income</string>
+    <string name="periodic">Periodic</string>
+    <string name="next_pay_date">Next Pay Date</string>
+    <string name="permission_granted">Permissions Granted, please try to take a picture again.</string>
+    <string name="permission_denied">You must allow permissions in order to register.</string>
+    <string name="income_info">income info</string>
+    <string name="role_title">Role title</string>
+    <string name="place_of_employment">Place of employment</string>
+    <string name="employer_address">Employer address</string>
+    <string name="emp_city">Employer city</string>
+    <string name="emp_state">Employer state</string>
+    <string name="emp_zip">Employer zip code</string>
+    <string name="two_most_recent_paystubs">2 most recent paystubs</string>
+    <string name="please_fill_all_fields">Please fill out all fields.</string>
+    <string name="ssn_must_match">SSN\'s must match, please try again.</string>
+    <string name="sixty_six_percent">66%</string>
+    <string name="one_hundred_percent">100%</string>
+    <string name="upload_documents">upload documents</string>
+    <string name="paystubs_attached">Paystubs attached</string>
+    <string name="id_attached">Identification attached</string>
+    <string name="filled">Filled</string>
+    <string name="person_match">Matched Names, DOB, City.</string>
+    <string name="employer_match">Matched Employer Name, City, State.</string>
+    <string name="drivers_license_or_id">Drivers license or ID</string>
+    <string name="signing_in">Signing in…</string>
+    <string name="login_failed">Login failed</string>
+    <string name="invalid_username_or_pass">Please enter a valid username and password</string>
+    <string name="total_borrowed">Total borrowed</string>
+    <string name="switch_to_lending">Switch to lending</string>
+    <string name="my_information">my information</string>
+    <string name="link_mobile_phone">Link mobile phone</string>
+    <string name="notifications">Notifications</string>
+    <string name="legal_agreements">Legal agreements</string>
+    <string name="about">About</string>
+    <string name="logout">Logout</string>
+    <string name="tell_us_about_you">Tell us a little bit about yourself</string>
+    <string name="invest_in_holdsum">Invest in HoldSum, Become a Lender-Partner</string>
+    <string name="invest">Invest</string>
+    <string name="borrow_capitalized">Borrow</string>
+    <string name="funds_source">Source of Funds</string>
+    <string name="ssn">SSN</string>
+    <string name="ssn_confirm">SSN (Confirm)</string>
+    <string name="state_admin_rate">state admin rate</string>
+    <string name="account_information">account information</string>
+    <string name="account_number">Account Number</string>
+    <string name="routing_number">Routing Number</string>
+    <string name="registering_profile">Uploading user data…</string>
+    <string name="profile_registration_error">Updating user account failed.</string>
+    <string name="empty"></string>
+    <string name="invest_link"><a href='https://wefunder.com/holdsum'>Invest</a></string>
+    <string name="confirmation">Confirmation</string>
+    <string name="bank_verification">Bank verification</string>
+    <string name="plaid_error">Verification failed. Please try again.</string>
+    <string name="token_registration_error">Updating user account failed.</string>
+    <string name="registering_token">Uploading user data…</string>
+    <string name="doc_signing_error">You need to sign all the required documents to proceed.</string>
+    <string name="doc_signing_prompt">Please complete signing process first.</string>
+    <string name="doc_get_signing_url_failed">Loading documents failed.</string>
+    <string name="loading_docs">Loading documents…</string>
+    <string name="all_signed">All documents signed!</string>
+    <string name="user_signup">Sign up</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="select_username_and_password">Select username and password</string>
+    <string name="registering_username">Creating account…</string>
+    <string name="empty_credentials_error">Please provide a username and password for your account.</string>
+    <string name="mismatch_passwords_error">Password and its confirmation are different.</string>
+    <string name="too_short_password_error">Password must be at least 6 characters long.</string>
+    <string name="username_registration_error">Creating new account failed.</string>
+    <string name="loan_how_much">How much would you like to borrow? ($)</string>
+    <string name="loan_question_1">What will the majority of the funds be used for?</string>
+    <string name="loan_question_2">Do you rent or own your home?</string>
+    <string name="loan_question_3">How many times have you applied for credit over the past year?</string>
+    <string name="loan_question_4">How many times have you checked your credit score over the past year?</string>
+    <string name="loan_question_5">How long have you worked in the industry you’re currently in?</string>
+    <string name="loan_question_5_alt">How long have you been collecting income from your %s?</string>
+    <string name="loan_question_6">What’s your highest level of education completed?</string>
+    <string name="loan_question_7">What are the 2 highest bills that you\'ll need to pay on your %s pay check?</string>
+    <string name="loan_question_2_textbox_hint">Enter mortgage holder</string>
+    <string name="loan_question_7_textbox_hint">Amount of bill ($)</string>
+    <string name="loan_amount_invalid">You need to enter a valid amount not greater than available funds.</string>
+    <string name="loan_offer_paydate_change">Looks like money will be tight for you on your proposed pay back date, click here to elect to accept the change of your pay back date to your following pay check.</string>
+    <string name="loan_offer_paydate_change_confirm">Accept date change</string>
+    <string name="loan_offer_paydate_change_cancel">Don\'t change</string>
+    <string name="requesting_loan">Submitting loan request…</string>
+    <string name="loan_request_error">Loan request failed.</string>
+    <string name="user_not_approved">Your account is not yet approved.\nWe will notify you as soon it is.</string>
+    <string-array name="sex">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Select answer…</item>
+    </string-array>
+    <string-array name="employed_or_not">
+        <item>Employed</item>
+        <item>Unemployed</item>
+        <item>Select answer…</item>
+    </string-array>
+    <string-array name="pay_frequency">
+        <item>Weekly</item>
+        <item>Biweekly</item>
+        <item>Monthly</item>
+        <item>Select answer…</item>
+    </string-array>
+    <string-array name="account_type">
+        <item>Checking</item>
+        <item>Savings</item>
+        <item>Select answer…</item>
+    </string-array>
+    <string-array name="question1_answers">
+        <item>Food, Water, Shelter</item>
+        <item>Bill payments (electric, phone, cable, car, etc.)</item>
+        <item>Friends or Family</item>
+        <item>Special Event</item>
+        <item>Select answer…</item>
+    </string-array>
+    <string-array name="question2_answers">
+        <item>Own</item>
+        <item>Rent</item>
+        <item>Select answer…</item>
+    </string-array>
+    <string-array name="question3_answers">
+        <item>0 – 1 times</item>
+        <item>1 – 3 times</item>
+        <item>3 – 6 times</item>
+        <item>6 – 9 times</item>
+        <item>Select answer…</item>
+    </string-array>
+    <string-array name="question4_answers">
+        <item>4 or more times</item>
+        <item>2 or 3 times</item>
+        <item>1 time</item>
+        <item>0 times</item>
+        <item>Select answer…</item>
+    </string-array>
+    <string-array name="question5_answers">
+        <item>0 – 3 months</item>
+        <item>4 – 12 months</item>
+        <item>1 – 3 years</item>
+        <item>3 – 6 years</item>
+        <item>6 – 10 years or beyond</item>
+        <item>Not Applicable</item>
+        <item>Select answer…</item>
+    </string-array>
+    <string-array name="question5_alt_answers">
+        <item>0 – 3 months</item>
+        <item>4 – 12 months</item>
+        <item>1 – 3 years</item>
+        <item>3 – 6 years</item>
+        <item>6 – 10 years or beyond</item>
+        <item>Select answer…</item>
+    </string-array>
+    <string-array name="question6_answers">
+        <item>Some high school (no diploma)</item>
+        <item>High school diploma or GED</item>
+        <item>Some community college</item>
+        <item>Associates degree</item>
+        <item>Bachelor’s degree</item>
+        <item>Graduate degree</item>
+        <item>Select answer…</item>
+    </string-array>
+    <string-array name="question7_answers">
+        <item>Rent</item>
+        <item>Car Payment/Insurance</item>
+        <item>Cell Phone</item>
+        <item>Electricity</item>
+        <item>Cable</item>
+        <item>Grocery</item>
+        <item>Gas</item>
+        <item>Childcare</item>
+        <item>Other</item>
+        <item>None</item>
+        <item>Select answer…</item>
+    </string-array>
+</resources>

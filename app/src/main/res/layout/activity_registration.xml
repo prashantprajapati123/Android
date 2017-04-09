@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class="RegistrationBinding">
+        <variable
+            name="presenter"
+            type="gigster.com.holdsum.presenters.RegistrationPresenter"/>
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_white"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        tools:context="gigster.com.holdsum.activities.RegistrationActivity">
+
+        <fragment
+            android:name="gigster.com.holdsum.fragments.TopHeaderFragment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/top_bar_fragment"/>
+
+        <LinearLayout
+            android:id="@+id/progress_holder"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@id/top_bar_fragment"
+            android:weightSum="3"
+            android:layout_height="5dp">
+            <View android:id="@+id/progress"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/green"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <TextView android:id="@+id/percentage"
+            style="@style/ProgressLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/progress_holder"
+            android:text="@string/thirty_three_percent"/>
+
+        <Button android:id="@+id/submit"
+            style="@style/ColoredButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_alignParentBottom="true"
+            android:text="@string/next"
+            android:onClick="@{() -> presenter.onNextClicked()}"/>
+
+        <ViewFlipper android:id="@+id/view_flipper"
+            android:layout_below="@id/percentage"
+            android:layout_above="@id/submit"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+</layout>

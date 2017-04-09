@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="base_url">https://holdsum.herokuapp.com/</string>
+    <!--string name="base_url">http://192.168.1.149:5000/</string-->
+    <string name="about_url">https://s3-us-west-2.amazonaws.com/holdsum/content/about.html</string>
+    <string name="legal_url">http://docs.google.com/gview?embedded=true&amp;url=https://s3-us-west-2.amazonaws.com/holdsum/content/HOLDSUM_LOAN+AGREEMENT.pdf</string>
+    <string name="invest_url">https://wefunder.com/holdsum</string>
+    <bool name="logsEnabled">false</bool><!-- Disable for release -->
+    <bool name="debug">false</bool><!-- !!! Disable for release -->
+    <string name="facebook_app_id">1675049379416609</string>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data class="BankVerificationDataBinding">
+        <variable
+            name="presenter"
+            type="gigster.com.holdsum.presenters.BankVerificationPresenter"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/light_white">
+
+            <fragment
+                android:name="gigster.com.holdsum.fragments.TopHeaderFragment"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/top_bar_fragment"/>
+
+
+            <gigster.com.holdsum.views.PlaidWebView
+                android:id="@+id/verification_webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                bind:onSuccess="@{(token) -> presenter.onVerificationSuccess(token)}"
+                bind:onExit="@{() -> presenter.onVerificationExited()}"/>
+
+        </LinearLayout>
+</layout>
+

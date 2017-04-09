@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data class="ProfileDataBinding">
+        <variable
+            name="presenter"
+            type="gigster.com.holdsum.presenters.ProfilePresenter"/>
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@color/light_white"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            style="@style/TealLabel"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="12dp"
+            android:text="@string/my_information"/>
+
+        <Button
+            style="@style/TextButton"
+            android:layout_marginTop="12dp"
+            android:text="@string/link_mobile_phone" />
+
+        <Button
+            style="@style/TextButton"
+            android:layout_marginTop="3dp"
+            android:text="@string/notifications"/>
+
+        <TextView
+            style="@style/TealLabel"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="12dp"
+            android:text="legal"/>
+
+        <Button
+            style="@style/TextButton"
+            android:layout_marginTop="12dp"
+            android:text="@string/legal_agreements"
+            android:onClick="@{() -> presenter.onLegal()}"/>
+
+        <Button
+            style="@style/TextButton"
+            android:layout_marginTop="3dp"
+            android:text="@string/about"
+            android:onClick="@{() -> presenter.onAbout()}"/>
+
+        <Button android:id="@+id/logout"
+            style="@style/TextButton"
+            android:layout_marginTop="3dp"
+            android:text="@string/logout"
+            android:onClick="@{() -> presenter.onLogout()}"/>
+
+        <Button android:id="@+id/invest"
+            style="@style/TextButton"
+            android:layout_marginTop="3dp"
+            android:text="Invest"
+            android:onClick="@{() -> presenter.onInvest()}"/>
+
+
+    </LinearLayout>
+</layout>

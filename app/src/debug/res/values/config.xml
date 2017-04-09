@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="base_url">https://holdsum.herokuapp.com/</string>
+    <!--string name="base_url">http://192.168.1.149:5000/</string-->
+    <bool name="logsEnabled">true</bool><!-- Disable for release -->
+    <bool name="debug">true</bool><!-- !!! Disable for release -->
+    <string name="facebook_app_id">1675049379416609</string>
+</resources>

@@ -1,0 +1,74 @@
+<layout>
+    <data class="DashboardDataBinding">
+
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        android:background="@color/light_white"
+        tools:context="gigster.com.holdsum.fragments.DashboardFragment">
+
+        <TextView
+            style="@style/TealLabel"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/next_payment" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingTop="30dp"
+                android:paddingBottom="20dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    style="@style/BigDarkLabel"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/payment"/>
+
+                <TextView android:id="@+id/amount"
+                    style="@style/LargeTealLabel"
+                    android:layout_gravity="center_horizontal"
+                    android:text="$50"/>
+
+                <TextView android:id="@+id/due_in"
+                    style="@style/BigDarkLabel"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <TextView
+            style="@style/TealLabel"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/past_loans" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/past_payment_list"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</layout>
