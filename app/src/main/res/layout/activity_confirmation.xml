@@ -11,22 +11,22 @@
         android:layout_height="match_parent"
         android:background="@color/light_white">
 
-        <Button android:id="@+id/confirm_button"
+        <Button
+            android:id="@+id/confirm_button"
             style="@style/ColoredButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/activity_horizontal_margin"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/metrics_15sp"
+            android:onClick="@{() -> presenter.onConfirmLoan()}"
             android:text="@string/confirm_loan"
-            android:onClick="@{() -> presenter.onConfirmLoan()}"/>
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <fragment
                 android:name="gigster.com.holdsum.fragments.TopHeaderFragment"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/metrics_50dp"
                 android:layout_alignParentTop="true"
                 android:id="@+id/top_bar_fragment"/>
 

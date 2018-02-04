@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:facebook="http://schemas.android.com/apk/res-auto">
     <data class="LoginBinding">
         <variable
             name="presenter"
@@ -31,17 +31,17 @@
             <TextView
                 style="@style/TealLabel"
                 android:text="@string/you_must_sign_in_before_accessing_your_dashboard"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_marginTop="15dp"/>
 
-            <TextView
-                style="@style/Label"
-                android:layout_marginTop="25dp"
-                android:text="@string/username"/>
+
 
             <EditText
                 style="@style/LoginUsernameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+
                 android:hint="@string/username"
                 android:text="@={data.username}"/>
 
@@ -50,6 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@={data.password}"/>
 
             <Button android:id="@+id/login_button"
@@ -57,6 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/login"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:onClick="@{() -> presenter.onLoginClicked()}"/>
 
             <com.facebook.login.widget.LoginButton
@@ -64,6 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="15dp"
+                android:textSize="@dimen/metrics_15sp"
                 android:paddingBottom="15dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="30dp" />
@@ -77,6 +80,7 @@
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_alignParentBottom="true"
             android:text="@string/sign_up"
             android:onClick="@{() -> presenter.onSignupClicked()}"

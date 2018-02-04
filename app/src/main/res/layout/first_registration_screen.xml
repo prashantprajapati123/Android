@@ -7,6 +7,8 @@
     </data>
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
         android:layout_height="match_parent">
 
         <LinearLayout
@@ -16,8 +18,7 @@
 
             <TextView
                 style="@style/TealLabel"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="15dp"
+
                 android:text="@string/personal_info" />
 
             <EditText
@@ -62,8 +63,7 @@
 
             <TextView
                 style="@style/TealLabel"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="15dp"
+
                 android:text="@string/address" />
 
 

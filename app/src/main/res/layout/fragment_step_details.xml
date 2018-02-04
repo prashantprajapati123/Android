@@ -45,6 +45,7 @@
                     style="@style/Label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_marginTop="12dp"
                     android:text="@{step.headerText}" />
             </LinearLayout>
@@ -67,6 +68,8 @@
 
             <TextView
                 style="@style/LightLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+
                 android:text="@{step.firstText}" />
 
         </LinearLayout>
@@ -87,6 +90,8 @@
 
             <TextView android:id="@+id/second_text"
                 style="@style/LightLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+
                 android:text="@{step.secondText}" />
 
         </LinearLayout>
@@ -107,6 +112,8 @@
 
             <TextView
                 style="@style/LightLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+
                 android:text="@{step.thirdText}" />
 
         </LinearLayout>
@@ -127,6 +134,8 @@
 
             <TextView
                 style="@style/LightLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+
                 android:text="@{step.fourthText}" />
 
         </LinearLayout>
@@ -137,6 +146,8 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="12dp"
             android:layout_marginBottom="12dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
             android:layout_marginEnd="12dp"
             android:layout_gravity="end"
             android:onClick="@{() -> presenter.onNextClicked()}"

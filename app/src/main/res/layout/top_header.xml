@@ -8,7 +8,7 @@
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/metrics_50dp"
         android:layout_alignParentTop="true"
         android:background="@color/primary_teal">
 
@@ -17,17 +17,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
+
             android:layout_centerVertical="true"
-            android:padding="10dp"
+            android:layout_margin="10dp"
             android:src="@drawable/ic_back"
             android:onClick="@{() -> listener.onBackClicked()}"/>
 
-        <TextView android:id="@+id/header_text"
+        <TextView
+            android:id="@+id/header_text"
             style="@style/LightLabel"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="5dp"
-            android:layout_toRightOf="@id/back"
-             />
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
 
     </RelativeLayout>
 </layout>

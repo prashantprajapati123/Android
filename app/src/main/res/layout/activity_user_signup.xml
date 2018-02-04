@@ -18,22 +18,28 @@
         <fragment
             android:name="gigster.com.holdsum.fragments.TopHeaderFragment"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/metrics_50dp"
             android:id="@+id/top_bar_fragment"/>
 
         <LinearLayout
+            android:id="@+id/userSignUpDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/top_bar_fragment"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:orientation="vertical">
 
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
             <TextView
+                android:id="@+id/titleTv"
                 style="@style/TealLabel"
+                android:layout_alignLeft="@+id/next_button"
+                android:layout_alignStart="@+id/next_button"
+                android:layout_below="@+id/top_bar_fragment"
+                android:layout_marginTop="12dp"
+                android:layout_above="@+id/userSignUpDetails"
                 android:text="@string/select_username_and_password"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"/>
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <EditText
                 style="@style/LoginUsernameEditText"
@@ -52,6 +58,7 @@
             <EditText
                 style="@style/LoginPasswordEditText"
                 android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
                 android:hint="@string/password"
                 android:text="@={data.password}"/>
@@ -59,6 +66,7 @@
             <EditText
                 style="@style/LoginPasswordEditText"
                 android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
                 android:hint="@string/confirm_password"
                 android:text="@={data.confirmPassword}"/>
@@ -71,10 +79,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
             android:layout_alignParentBottom="true"
             android:text="@string/next"
             android:onClick="@{() -> presenter.onNextClicked()}"/>
+
 
     </RelativeLayout>
 </layout>

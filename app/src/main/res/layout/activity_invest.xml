@@ -10,7 +10,7 @@
         <fragment
             android:name="gigster.com.holdsum.fragments.TopHeaderFragment"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/metrics_50dp"
             android:id="@+id/top_bar_fragment"/>
 
         <WebView

@@ -7,6 +7,8 @@
     </data>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:background="@color/light_white"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:orientation="vertical" android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -18,11 +20,14 @@
 
         <Button
             style="@style/TextButton"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_marginTop="12dp"
             android:text="@string/link_mobile_phone" />
 
         <Button
             style="@style/TextButton"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
             android:layout_marginTop="3dp"
             android:text="@string/notifications"/>
 
@@ -35,23 +40,31 @@
         <Button
             style="@style/TextButton"
             android:layout_marginTop="12dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
             android:text="@string/legal_agreements"
             android:onClick="@{() -> presenter.onLegal()}"/>
 
         <Button
             style="@style/TextButton"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
             android:layout_marginTop="3dp"
             android:text="@string/about"
             android:onClick="@{() -> presenter.onAbout()}"/>
 
         <Button android:id="@+id/logout"
             style="@style/TextButton"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
             android:layout_marginTop="3dp"
             android:text="@string/logout"
             android:onClick="@{() -> presenter.onLogout()}"/>
 
         <Button android:id="@+id/invest"
             style="@style/TextButton"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
             android:layout_marginTop="3dp"
             android:text="Invest"
             android:onClick="@{() -> presenter.onInvest()}"/>
